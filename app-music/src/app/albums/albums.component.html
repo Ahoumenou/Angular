@@ -1,0 +1,31 @@
+
+<div class="row content">
+    <div class="col-sm-4 video">
+        <app-album-details  [album]="selectedAlbum" (onPlay)="playParent($event)"></app-album-details>
+    </div><!-- .video -->
+
+    <div class="col-sm-8 music" *ngIf="albums">
+         <h1> {{titlePage}} </h1>
+        <div class="card" *ngFor="let album of albums">
+            <div class="card-header">
+                Pop <span *ngIf="EventId === album.id "> Play </span>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"> {{ album.title }} </h5>
+                <p class="card-text"> {{album.description}} </p>
+                <ul *ngIf="album.tags" class="tags">
+                    <li *ngFor="let tag of album.tags" class="el_tags"> {{tag}} </li>
+                </ul>
+                <a class="btn btn-outline-dark" href="#" role="button">en</a>
+
+                <img class="glyph-icon" src="./assets/svg/si-glyph-heart.svg" />
+                <small> {{ album.like}} </small>
+                <img class="glyph-icon" src="./assets/svg/si-glyph-timer.svg" />
+                <small> {{ album.duration }} min</small>
+                <button class="btn" type="button" (click)="onSelected(album)"> Details </button>
+            </div>
+        </div><!-- .card -->
+        
+    </div><!-- .music -->
+
+</div>

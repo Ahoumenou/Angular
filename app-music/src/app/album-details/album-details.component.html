@@ -1,0 +1,19 @@
+<p>album-details works!</p>
+ <div class="div">
+    <!-- {{ album | json}} -->
+
+    <div class="card" *ngIf="album">
+        <img class="card-img-top" src="{{album.url}}" alt="Group Music">
+        <div class="card-body">
+            <h5 class="card-title"> {{album.title}} </h5>
+            <p class="card-text"> {{album.name}} </p>
+            <button class="btn btn-primary" (click)="play(album)" type="button">Play 🎶>> </button>
+            <ul class="list-group" >
+                <li class="list-group-item active" *ngFor="let el of selectedList"> {{el}} </li>
+           
+            </ul>
+        </div>
+   
+     
+
+</div>

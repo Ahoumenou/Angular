@@ -1,0 +1,47 @@
+.glyph-icon{
+    max-width: 1%;
+}
+
+.row,
+.tags{
+    display: flex;
+}
+
+.col-sm-8{
+    flex-basis: 67%;
+}
+
+.col-sm-4{
+    flex-basis: 33%;
+}
+
+.card:nth-child(2n){
+    background-color: rgb(230, 223, 215);
+    padding:.5rem;
+    margin-block: .5rem;
+}
+.card-header{
+    padding-block: .5rem;
+    border-color: rgb(116, 219, 135);
+    border: 1px solid;
+}
+.tags{
+    list-style: none;
+}
+.el_tags{
+    padding: .5rem;
+    margin-right: .5rem;
+    background-color: rgba(151, 211, 211, 0.874);
+    border-radius: 5px;
+
+}
+.btn{
+    padding: .5rem;
+    border: 1px solid;
+    border-radius: 5px;
+    list-style: none;
+    transition-duration: 1s;
+}
+.btn:hover{
+    background-color: rgb(194, 147, 239);
+}
